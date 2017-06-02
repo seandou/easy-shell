@@ -20,7 +20,7 @@
     "inquirer": "^3.0.6"
   },
   "bin": {
-    "open-doc": "./bin/cli.js"
+    "load-easy-shell": "./bin/load-easy-shell.sh"
   },
   "engines": {
     "node": ">=0.10.x"
