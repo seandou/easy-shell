@@ -1,0 +1,28 @@
+{
+  "name": "easy-shell",
+  "version": "0.0.1",
+  "description": "Make shell more easy to use.",
+  "homepage": "https://github.com/seandou/easy-shell",
+  "keywords": [
+    "easy",
+    "shell",
+    "ui",
+    "color"
+  ],
+  "author": "Sean Dou <douguohui@gmail.com>",
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "main": "./lib/index.js",
+  "dependencies": {
+    "inquirer": "^3.0.6"
+  },
+  "bin": {
+    "open-doc": "./bin/cli.js"
+  },
+  "engines": {
+    "node": ">=0.10.x"
+  }
+}
