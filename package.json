@@ -20,9 +20,14 @@
     "inquirer": "^3.0.6"
   },
   "bin": {
-    "load-easy-shell": "./bin/load-easy-shell.sh"
+    "load-easy-shell": "./bin/load-easy-shell"
   },
   "engines": {
     "node": ">=0.10.x"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seandou/easy-shell.git"
   }
 }
