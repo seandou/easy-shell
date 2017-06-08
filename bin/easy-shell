@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var os = require('os');
+var path = require('path');
+var fs = require('fs');
+
+var inquirer = require('inquirer');
+var es = require('../lib/');
+
+var argv = process.argv.slice(2);
+
+// parse component and data
+var component = argv.shift();
+var msg = argv.shift();
+var data = argv.shift().trim().split(os.EOL);
+
+
+if (component == 'list') {
+    inquirer.prompt([
+      { type: 'list', name: 'list', message: msg, choices: data }
+    ]).then(function(answers) {
+        fs.writeFileSync(path.join(os.homedir(), '.escache'), answers.list);
+    });
+}

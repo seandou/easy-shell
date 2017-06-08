@@ -1,6 +1,6 @@
 {
   "name": "easy-shell",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Make shell more easy to use.",
   "homepage": "https://github.com/seandou/easy-shell",
   "keywords": [
@@ -20,7 +20,8 @@
     "inquirer": "^3.0.6"
   },
   "bin": {
-    "load-easy-shell": "./bin/load-easy-shell"
+    "load-easy-shell": "./bin/load-easy-shell",
+    "easy-shell": "./bin/easy-shell"
   },
   "engines": {
     "node": ">=0.10.x"

@@ -1,7 +1,11 @@
 #!/bin/bash
 
 function eslist() {
-    echo 'eslist'
+    easy-shell "list" "$1" "$2"
 }
 
+function esret() {
+    cat $HOME/.escache
+}
 
+cat /dev/null > $HOME/.escache
