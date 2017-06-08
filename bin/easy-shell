@@ -3,10 +3,6 @@
 'use strict';
 
 var os = require('os');
-var path = require('path');
-var fs = require('fs');
-
-var inquirer = require('inquirer');
 var es = require('../lib/');
 
 var argv = process.argv.slice(2);
@@ -16,11 +12,7 @@ var component = argv.shift();
 var msg = argv.shift();
 var data = argv.shift().trim().split(os.EOL);
 
-
+// process
 if (component == 'list') {
-    inquirer.prompt([
-      { type: 'list', name: 'list', message: msg, choices: data }
-    ]).then(function(answers) {
-        fs.writeFileSync(path.join(os.homedir(), '.escache'), answers.list);
-    });
+    es.list(msg, data);
 }
