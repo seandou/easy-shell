@@ -8,4 +8,5 @@ function esret() {
     cat $HOME/.escache
 }
 
+# clear cache
 cat /dev/null > $HOME/.escache
