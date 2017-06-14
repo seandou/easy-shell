@@ -4,15 +4,13 @@ Make shell more easy to use.
 
 
 
-## Usage
-
-### Installation
+## Installation
 
 ```
 npm install -g easy-shell
 ```
 
-### Get started
+## Get started
 
 ```
 #!/bin/bash
@@ -24,19 +22,31 @@ npm install -g easy-shell
 
 
 
-### Components
+## Components
 
-#### eslist
+### list
 
 ```
-filelist='
+options='
 ~/Projects/a
 ~/Projects/b
 ~/Projects/c
 '
 
-eslist "Choose a file" "$filelist"
-echo $(esret)
+list "Choose a file" "$options"
+echo $(result)
+```
+
+### confirm
+
+```
+confirm "Are you sure" "Y"
+
+if [ "$(result)" == "yes" ]; then
+    echo 'yes'
+else
+    echo 'no'
+fi
 ```
 
 
@@ -44,3 +54,4 @@ echo $(esret)
 ## Dependencies
 
 - [Inquirer.js](https://github.com/sboudrias/Inquirer.js)
+
