@@ -17,3 +17,8 @@ if (component == 'list') {
     es.list(msg, data);
 }
 
+if (component == 'confirm') {
+    var defaultVal = argv.shift().trim();
+    defaultVal = (defaultVal == 'Y');
+    es.confirm(msg, defaultVal);
+}

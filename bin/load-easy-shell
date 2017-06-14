@@ -4,6 +4,10 @@ function list() {
     easy-shell "list" "$1" "$2"
 }
 
+function confirm() {
+    easy-shell "confirm" "$1" "$2"
+}
+
 function result() {
     cat $HOME/.escache
 }
